@@ -82,7 +82,7 @@ git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome packag
 
 # Tailscale
 git clone --depth=1 https://github.com/tailscale/tailscale package/tailscale
-git clone --depth=1 https://github.com/JiaY-shi/luci-app-tailscale package/luci-app-tailscale
+git clone --depth=1 https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
 
 # Bandix
 git clone --depth=1 https://github.com/timsaya/openwrt-bandix package/openwrt-bandix
