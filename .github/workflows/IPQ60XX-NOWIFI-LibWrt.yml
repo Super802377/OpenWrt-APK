@@ -163,12 +163,13 @@ jobs:
         body: |
           **This is OpenWrt Firmware for ${{ env.FIRMWARE_TAG }}**
           ### 📒 固件信息
-          这是没有WiFi的NSS的6.12内核固件，软件安装包为APK管理，默认主题为Aurora；该固件在ImmortalWrt的基础上，添加了
+          这是没有WiFi的NSS的6.12内核固件，软件安装包为APK管理，默认主题为Aurora；
+          该固件包含以下软件
           -SmartDNS（智能DNS解析）
           -AdGuard Home（广告过滤/本地DNS）
           -Tailscale（异地组网）
-          -Bandix（流量监控）
           -WeChatPush（微信推送）
+          
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
           - 🌐 默认地址: **192.168.0.1**
