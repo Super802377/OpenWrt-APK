@@ -76,14 +76,14 @@ git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-momo package/momo
 git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki package/nikki
 chmod +x package/luci-app-athena-led/root/etc/init.d/athena_led package/luci-app-athena-led/root/usr/sbin/athena-led
 
-# AdGuard Home
+# AdGuard Home（广告过滤/本地DNS）
 git clone --depth=1 https://github.com/AdguardTeam/AdGuardHome package/AdGuardHome
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
 
-# Tailscale
+# Tailscale（异地组网）
 git clone --depth=1 https://github.com/GuNanOvO/openwrt-tailscale package/tailscale
 
-# Bandix
+# Bandix（流量监控）
 #git clone --depth=1 https://github.com/timsaya/openwrt-bandix package/openwrt-bandix
 #git clone --depth=1 https://github.com/timsaya/luci-app-bandix package/luci-app-bandix
 
