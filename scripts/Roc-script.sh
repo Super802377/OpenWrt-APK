@@ -76,16 +76,20 @@ git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-momo package/momo
 git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki package/nikki
 chmod +x package/luci-app-athena-led/root/etc/init.d/athena_led package/luci-app-athena-led/root/usr/sbin/athena-led
 
-# AdGuard Home（广告过滤/本地DNS）
-git clone --depth=1 https://github.com/AdguardTeam/AdGuardHome package/AdGuardHome
-git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
+# ========== 删除feeds中冲突的旧版AdGuard ==========
+rm -rf "$OPENWRT_DIR"/feeds/packages/net/adguardhome
+rm -rf "$OPENWRT_DIR"/feeds/luci/applications/luci-app-adguardhome
+
+# ========== 拉取AdGuardHome ==========
+git clone --depth=1 --filter=blob:none https://github.com/rufengsuixing/AdGuardHome.git "$OPENWRT_DIR"/package/adguardhome
+git clone --depth=1 --filter=blob:none https://github.com/rufengsuixing/luci-app-adguardhome.git "$OPENWRT_DIR"/package/luci-app-adguardhome
 
 # Tailscale（异地组网）
 git clone --depth=1 https://github.com/GuNanOvO/openwrt-tailscale package/tailscale
 
 # Bandix（流量监控）
-#git clone --depth=1 https://github.com/timsaya/openwrt-bandix package/openwrt-bandix
-#git clone --depth=1 https://github.com/timsaya/luci-app-bandix package/luci-app-bandix
+# git clone --depth=1 https://github.com/timsaya/openwrt-bandix package/openwrt-bandix
+# git clone --depth=1 https://github.com/timsaya/luci-app-bandix package/luci-app-bandix
 
 
 ### PassWall & OpenClash ###
