@@ -76,6 +76,10 @@ git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-momo package/momo
 git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki package/nikki
 chmod +x package/luci-app-athena-led/root/etc/init.d/athena_led package/luci-app-athena-led/root/usr/sbin/athena-led
 
+#  删除feeds里冲突的旧包
+rm -rf feeds/packages/net/adguardhome
+rm -rf feeds/luci/applications/luci-app-adguardhome
+
 # ========== 拉取AdGuardHome ==========
 git clone --depth=1 https://github.com/rufengsuixing/AdGuardHome package/AdGuardHome
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
