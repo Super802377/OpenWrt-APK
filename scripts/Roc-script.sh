@@ -79,12 +79,12 @@ chmod +x package/luci-app-athena-led/root/etc/init.d/athena_led package/luci-app
 
 # ========== 拉取AdGuardHome ==========
 # 移除源码自带的版本
-rm -rf feeds/packages/net/adguardhome
+# rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-adguardhome
-# 克隆新版本
-git clone --depth=1 https://github.com/AdguardTeam/AdGuardHome package/adguardhome
-git clone --depth=1 https://github.com/sirpdboy/luci-app-adguardhome.git package/luci-app-adguardhome
-mv -f package/adguardhome feeds/packages/net/adguardhome
+# 克隆
+# git clone --depth=1 https://github.com/AdguardTeam/AdGuardHome package/adguardhome
+git clone --depth=1 https://github.com/sirpdboy/luci-app-adguardhome package/luci-app-adguardhome
+# mv -f package/adguardhome feeds/packages/net/adguardhome
 mv -f package/luci-app-adguardhome feeds/luci/applications/luci-app-adguardhome
 
 # Tailscale（异地组网）
